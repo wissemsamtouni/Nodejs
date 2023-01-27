@@ -1,0 +1,20 @@
+
+
+{% extends 'layout.twig' %}
+
+{% block body %}
+<h1>Add New produit</h1>
+	<form class="form-group" method="post" action="http://localhost:3000/produits/addProduct">
+		libelle:
+		<input type="text" class="form-control" name="Libelle" placeholder="your Libelle"/><br>
+        Price:
+		<input type="number" class="form-control" name="Prix" placeholder="your Prix"/><br/>
+		description:
+		<input type="text" class="form-control" name="Description"/><br/>
+		Quantite:
+		<input type="number" class="form-control" name="Quantite"/><br/>
+		
+		<button type="submit" type="button" class="btn btn-success">ajouter un produit</button>
+	</form>
+    
+    {% endblock %}

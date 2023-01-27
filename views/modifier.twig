@@ -1,0 +1,17 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+    <h1>{{title}}</h1>
+    <form class="form-group" method="post" action="http://localhost:3000/produits/edit/{{cont._id}}">
+		Libelle:
+		<input  class="form-control"type="text" name="Libelle" placeholder="your fullname" value={{cont.Libelle}} /><br/>
+        Price:
+		<input  class="form-control" type="number" name="Price" placeholder="your fullname" value={{cont.Prix}} /><br/>
+		Description:
+		<input  class="form-control" type="text" name="Description" value={{cont.Description}} /><br/>
+        Quantite:
+		<input  class="form-control" type="number" name="Quantite" value={{cont.Quantite}} /><br/>
+		<button type="submit" type="button" class="btn btn-primary">modifer produit</button>
+	</form>
+
+{% endblock %}

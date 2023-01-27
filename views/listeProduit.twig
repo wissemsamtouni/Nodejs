@@ -1,0 +1,36 @@
+	
+    {% extends 'layout.twig' %}
+
+{% block body %}
+<table class="table">
+		<thead>
+			<th scope="col">Libelle</th>
+			<th scope="col">Prix</th>
+			<th scope="col">Description</th>
+            <th scope="col">Quantite</th>
+            <th scope="col">stock</th>
+            <th scope="col">Supprimer</th>
+            <th scope="col">Modifier</th>
+		</thead>
+		<tbody>
+			{% for produit in cont %}
+				<tr>
+					<td>{{produit.Libelle}}</td>
+					<td>{{produit.Prix}}</td>
+                    <td>{{produit.Description}}</td>
+                    <td>{{produit.Quantite}}</td>
+                    <td>cc</td>
+					<td>
+                    <a href="http://localhost:3000/produits/delete/{{produit._id}}">
+							<button type="button" class="btn btn-danger">Supprimer</button>
+						</a></td>
+                    <td>
+						<a href="http://localhost:3000/produits/edit/{{produit._id}}">
+							<button type="button" class="btn btn-info">Modifier</button>
+						</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+    {% endblock %}
